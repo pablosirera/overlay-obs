@@ -15,12 +15,14 @@ export default {
 .cam-frame {
   border: 5px solid rgb(67, 93, 76);
   border-radius: 5px;
-  width: 250px;
-  height: 150px;
+  width: 450px;
+  height: 350px;
 }
 
 .chat-title {
-  width: 250px;
+  width: 450px;
   text-align: center;
+  font-size: 60px;
+  font-weight: bold;
 }
 </style>
