@@ -13,14 +13,14 @@ export default {
 
 <style lang="scss" scoped>
 .cam-frame {
-  border: 5px solid rgb(67, 93, 76);
+  border: 5px solid var(--color-secondary);
   border-radius: 5px;
-  width: 450px;
-  height: 350px;
+  width: 610px;
+  height: 360px;
 }
 
 .chat-title {
-  width: 450px;
+  width: 610px;
   text-align: center;
   font-size: 60px;
   font-weight: bold;
