@@ -10,6 +10,6 @@
   color: #2c3e50;
   background-color: var(--color-primary);
   padding: 10px;
-  height: 100vh;
+  height: 100%;
 }
 </style>
