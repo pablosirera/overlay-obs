@@ -62,7 +62,7 @@ export default {
   border: 8px solid var(--color-secondary);
   width: 100%;
   // TODO: should be 100%
-  height: 89%;
+  height: 90%;
   box-sizing: border-box;
   border-radius: 5px;
 }

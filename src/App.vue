@@ -10,6 +10,6 @@
   color: var(--color-yellow-brand);
   background-color: var(--color-primary);
   padding: 10px;
-  height: 100%;
+  height: 1080px;
 }
 </style>
