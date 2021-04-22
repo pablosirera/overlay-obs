@@ -1,6 +1,8 @@
 exports.handler = async (event) => {
   const { headers = [] } = event
 
+  console.log('entro en la función')
+
   const type = headers['twitch-eventsub-message-type'] || 'no type'
   const eventType = headers['twitch-eventsub-follow-type']
 

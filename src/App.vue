@@ -2,6 +2,46 @@
   <router-view />
 </template>
 
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'App',
+  mounted() {
+    this.loadData()
+  },
+  methods: {
+    async loadData() {
+      const data = {
+        type: 'channel.follow',
+        version: '1',
+        condition: {
+          broadcaster_user_id: '421932815',
+        },
+        transport: {
+          method: 'webhook',
+          callback:
+            'https://overlay-obs.netlify.app/.netlify/functions/twitch-follows',
+          secret: process.env.VUE_APP_SECRET_TWITCH,
+        },
+      }
+      const headers = {
+        headers: {
+          'Client-ID': process.env.VUE_APP_CLIENT_ID,
+          Authorization: 'Bearer a6jqetffl5lfdt5hy7nzsoodwxbaps',
+          'Content-Type': 'application/json',
+        },
+      }
+      axios.post(
+        'https://api.twitch.tv/helix/eventsub/subscriptions',
+        data,
+        headers
+      )
+    },
+  },
+}
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
