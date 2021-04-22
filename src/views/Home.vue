@@ -23,6 +23,15 @@ export default {
   components: {
     Chat,
   },
+  created() {
+    this.loadData()
+  },
+  methods: {
+    async loadData() {
+      let resp = await fetch('/.netlify/functions/hello-world?name=pablo')
+      this.msg = (await resp.json()).message
+    },
+  },
 }
 </script>
 
