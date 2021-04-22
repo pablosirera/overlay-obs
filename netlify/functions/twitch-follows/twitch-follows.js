@@ -1,10 +1,8 @@
 exports.handler = async (event) => {
   const { headers = [] } = event
 
-  console.log('entro en la función', event)
-
   const type = headers['twitch-eventsub-message-type'] || 'no type'
-  const eventType = headers['twitch-eventsub-follow-type']
+  const eventType = headers['twitch-eventsub-subscription-type']
 
   if (type !== 'notification' || eventType !== 'channel.follow') {
     return { statusCode: 200, body: '' }
