@@ -28,7 +28,7 @@ export default {
       const headers = {
         headers: {
           'Client-ID': process.env.VUE_APP_CLIENT_ID,
-          Authorization: 'Bearer a6jqetffl5lfdt5hy7nzsoodwxbaps',
+          Authorization: 'Bearer o5b09ctamgfl66kihzaafr9zbnw3cp',
           'Content-Type': 'application/json',
         },
       }
