@@ -9,7 +9,7 @@ exports.handler = async (event) => {
 
   if (eventType === 'channel.follow') {
     console.log('entro en el if')
-    emitter.$emit('new-follow')
+    emitter.emit('new-follow')
     return { statusCode: 200, body: '' }
   }
 
