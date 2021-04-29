@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     async loadData() {
-      const data = {
+      const subscriptionData = {
         type: 'channel.follow',
         version: '1',
         condition: {
@@ -32,11 +32,13 @@ export default {
           'Content-Type': 'application/json',
         },
       }
-      const response = await axios.post(
+      const { data } = await axios.post(
         'https://api.twitch.tv/helix/eventsub/subscriptions',
-        data,
+        subscriptionData,
         headers
       )
+      console.log(data)
+      const response = await axios.get(data.data[0].transport.callback)
       console.log(response)
     },
   },
