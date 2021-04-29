@@ -10,6 +10,7 @@
         <p>Último suscriptor:</p>
         <div class="twitch-info-rrss">pablosirera.com</div>
       </div>
+      <p v-show="shouldShowAlert">Hola nuevo seguidor</p>
       <div class="screen-frame"></div>
     </section>
   </div>
@@ -22,6 +23,19 @@ export default {
   name: 'Home',
   components: {
     Chat,
+  },
+  data() {
+    return {
+      shouldShowAlert: false,
+    }
+  },
+  mounted() {
+    this.emitter.on('new-follow', this.showAlert())
+  },
+  methods: {
+    showAlert() {
+      this.shouldShowAlert = true
+    },
   },
 }
 </script>
