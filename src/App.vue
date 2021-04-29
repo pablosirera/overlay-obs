@@ -32,11 +32,12 @@ export default {
           'Content-Type': 'application/json',
         },
       }
-      axios.post(
+      const response = await axios.post(
         'https://api.twitch.tv/helix/eventsub/subscriptions',
         data,
         headers
       )
+      console.log(response)
     },
   },
 }
