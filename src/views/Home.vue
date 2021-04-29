@@ -30,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    this.emitter.on('new-follow', this.showAlert())
+    this.emitter.on('new-follow', () => this.showAlert())
   },
   methods: {
     showAlert() {
