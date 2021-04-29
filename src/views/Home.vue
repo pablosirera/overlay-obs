@@ -18,6 +18,7 @@
 
 <script>
 import Chat from '@/components/Chat.vue'
+import { inject } from 'vue'
 
 export default {
   name: 'Home',
@@ -30,7 +31,8 @@ export default {
     }
   },
   mounted() {
-    this.emitter.on('new-follow', () => this.showAlert())
+    const emitter = inject('emitter')
+    emitter.on('new-follow', () => this.showAlert())
   },
   methods: {
     showAlert() {
