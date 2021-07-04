@@ -1,17 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Primary from '@/views/Primary.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Primary',
+    component: Primary,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/full-screen',
+    name: 'FullScreen',
+    component: () => import('@/views/FullScreen.vue'),
   },
 ]
 

@@ -8,7 +8,8 @@ import axios from 'axios'
 export default {
   name: 'App',
   mounted() {
-    this.loadData()
+    // TODO: fix subs notification
+    // this.loadData()
   },
   methods: {
     async loadData() {
@@ -51,8 +52,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-yellow-brand);
-  background-color: var(--color-primary);
-  padding: 10px;
   height: 1080px;
 }
 </style>

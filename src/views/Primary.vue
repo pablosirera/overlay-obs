@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <section>
-      <div class="cam-frame"></div>
+      <Cam />
       <Chat />
     </section>
     <section>
@@ -10,7 +10,6 @@
         <p>Último suscriptor:</p>
         <div class="twitch-info-rrss">pablosirera.com</div>
       </div>
-      <p v-show="shouldShowAlert">Hola nuevo seguidor</p>
       <div class="screen-frame"></div>
     </section>
   </div>
@@ -18,26 +17,13 @@
 
 <script>
 import Chat from '@/components/Chat.vue'
-import { inject } from 'vue'
+import Cam from '@/components/Cam.vue'
 
 export default {
   name: 'Home',
   components: {
     Chat,
-  },
-  data() {
-    return {
-      shouldShowAlert: false,
-    }
-  },
-  mounted() {
-    const emitter = inject('emitter')
-    emitter.on('new-follow', () => this.showAlert())
-  },
-  methods: {
-    showAlert() {
-      this.shouldShowAlert = true
-    },
+    Cam,
   },
 }
 </script>
@@ -47,21 +33,8 @@ export default {
   display: grid;
   grid-template-columns: 580px 1fr;
   column-gap: 15px;
-}
-.cam-frame {
-  border: 10px solid var(--color-secondary);
-  border-radius: 5px;
-  width: 100%;
-  height: 360px;
-  box-sizing: border-box;
-  border-width: 6px;
-  border-style: solid;
-  border-image-source: linear-gradient(
-    to left,
-    var(--color-secondary),
-    var(--color-yellow-brand)
-  );
-  border-image-slice: 1;
+  background-color: var(--color-primary);
+  padding: 10px;
 }
 .twitch-info {
   height: 100px;
