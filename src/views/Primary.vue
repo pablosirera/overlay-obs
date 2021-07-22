@@ -31,7 +31,7 @@ export default {
 <style lang="scss" scoped>
 .home {
   display: grid;
-  grid-template-columns: 580px 1fr;
+  grid-template-columns: 530px 1fr;
   column-gap: 15px;
   background-color: var(--color-primary);
   padding: 10px;
