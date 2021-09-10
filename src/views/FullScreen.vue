@@ -19,7 +19,7 @@ export default {
 .full-screen {
   background-color: transparent;
   &-cam {
-    width: 580px;
+    width: 570px;
     position: absolute;
     bottom: 0;
     right: 0;

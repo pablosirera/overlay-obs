@@ -15,7 +15,7 @@ export default {
   width: 100%;
   height: 360px;
   box-sizing: border-box;
-  border-width: 6px;
+  border-width: 10px;
   border-style: solid;
   border-image-source: linear-gradient(
     to left,
