@@ -12,6 +12,11 @@ const routes = [
     name: 'FullScreen',
     component: () => import('@/views/FullScreen.vue'),
   },
+  {
+    path: '/full-screen-rectangle',
+    name: 'FullScreenRectangle',
+    component: () => import('@/views/FullScreenRectangle.vue'),
+  },
 ]
 
 const router = createRouter({
